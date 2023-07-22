@@ -8,7 +8,11 @@ export function Video() {
   const { currentLesson } = useCurrentLesson()
 
   function handleNext() {
-    dispatch(next('test'))
+    dispatch(next())
+  }
+
+  if (!currentLesson) {
+    return null
   }
 
   return (
