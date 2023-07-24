@@ -30,10 +30,9 @@ const initialState: PlayerState = {
 }
 
 export const loadCourse = createAsyncThunk(
-  'plyaer/load',
+  'player/load',
   async () => {
     const response = await api.get('/courses/1')
-    console.log(response.data)
 
     return response.data
   }
